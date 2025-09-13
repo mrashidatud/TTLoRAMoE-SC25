@@ -1,0 +1,10 @@
+,metric,value
+0,Model_name,llama3.2-1b
+1,Dataset,qnli
+2,Total_epochs,4
+3,Trainable_parameters_count,12627970
+4,Learning_rate,0.0001
+5,Taining_Accuracy,0.5000525116920471
+6,Validation_Accuray,0.4946000277996063
+7,Training_Time,15438.618181943893
+8,Best_model_path,/local/TTLoRAMoE-SC25/Adapter_Saved_Individual_Expert/Adapter_Checkpoints/qnli/epoch=0-step=3274.ckpt

@@ -1,0 +1,23 @@
+# caches / temp
+transformers_cache/
+lightning_logs/
+__pycache__/
+Artifact_1.2/__pycache__/
+Artifact_1.3/__pycache__/
+*.lock
+*.ipynb_checkpoints/
+
+# local downloaded model dirs
+llama3.2-1b/
+
+# big training outputs (checkpoints); keep CSV summaries
+MoE_Checkpoints/
+LoRA_Saved_Individual_Expert/
+TTLoRA_Saved_Individual_Expert/
+Adapter_Saved_Individual_Expert/
+
+# keep results
+!Adapter_Experts_Results/*.csv
+!LoRA_Experts_Results/*.csv
+!TTLoRA_Experts_Results/*.csv
+!MoE_Training_Results/*.csv

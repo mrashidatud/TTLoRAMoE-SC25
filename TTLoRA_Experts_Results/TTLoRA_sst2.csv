@@ -1,0 +1,18 @@
+,metric,value
+0,Model_name,llama-3.2-1b
+1,Dataset,sst2
+2,Total_epochs,11
+3,Trainable_parameters_count,33920
+4,Query Shape,"[16, 8, 4, 4, 4, 4, 8, 16]"
+5,Query m_factors,"[16, 8, 4, 4]"
+6,Query n_factors,"[16, 8, 4, 4]"
+7,Value Shape,"[16, 16, 4, 2, 2, 16, 16]"
+8,Value m_factors,"[16, 16, 4, 2]"
+9,Value n_factors,"[16, 16, 2]"
+10,Rank,5
+11,Alpha,16
+12,Learning_rate,0.005
+13,Taining_Accuracy,0.9555605053901672
+14,Validation_Accuray,0.9449541568756104
+15,Training_Time,2315.9494144916534
+16,Best_model_path,/local/TTLoRAMoE-SC25/TTLoRA_Saved_Individual_Expert/sst2/epoch=5-step=6318.ckpt

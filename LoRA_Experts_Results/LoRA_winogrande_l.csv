@@ -1,0 +1,11 @@
+,metric,value
+0,Model_name,llama3.2-1b
+1,Dataset,winogrande_l
+2,Total_epochs,14
+3,Trainable_parameters_count,1703936
+4,Rank,16
+5,Alpha,8
+6,Learning_rate,0.0005
+7,Taining_Accuracy,0.9494821429252625
+8,Validation_Accuray,0.6750788688659668
+9,Best_model_path,/local/TTLoRAMoE-SC25/LoRA_Saved_Individual_Expert/winogrande_l/epoch=6-step=1120.ckpt

@@ -1,0 +1,29 @@
+metric,value
+Model_name,llama-3.2-1b
+Router Type,llm
+Trainable_parameters_count,24582
+epochs,11
+router_loss_weight,21
+Experts trainable,False
+Experts random initialization,False
+topk,1
+Gating Noise,True
+data_mix_type,balanced
+learning_rate,0.001
+Taining_Accuracy,0.9555901885032654
+Training Router Loss,4.6422113086919126e-07
+Training Total Loss,0.12328904867172241
+Training Router Acuracy,1.0
+Validation_Accuray,0.9449541568756104
+Validation Router Loss,0.0
+Validation Total Loss,0.12412235140800476
+Validation Router Acuracy,1.0
+Experts,"['mrpc', 'cola', 'sst2', 'qnli', 'rte', 'qqp', 'imdb', 'winogrande_l', 'hellaswag', 'socialiqa', 'cosmosqa', 'scitail', 'csqa', 'sick', 'cb', 'boolq', 'mnli']"
+Query m_factors,"[16, 8, 4, 4]"
+Query n_factors,"[16, 8, 4, 4]"
+Value m_factors,"[16, 16, 4, 2]"
+Value n_factors,"[16, 16, 2]"
+Best_model_path,/local/TTLoRAMoE-SC25/MoE_Checkpoints/single_sst2/epoch=0-step=2105.ckpt
+dataload_type,single
+dataset_name,sst2
+Training Time,6071.380227804184

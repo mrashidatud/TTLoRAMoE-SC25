@@ -1,0 +1,10 @@
+,metric,value
+0,Model_name,llama3.2-1b
+1,Dataset,cola
+2,Total_epochs,20
+3,Trainable_parameters_count,12627970
+4,Learning_rate,0.0001
+5,Taining_Accuracy,0.7043620347976685
+6,Validation_Accuray,0.6912751793861389
+7,Training_Time,891.5323419570923
+8,Best_model_path,/local/TTLoRAMoE-SC25/Adapter_Saved_Individual_Expert/Adapter_Checkpoints/cola/epoch=3-step=1072.ckpt
