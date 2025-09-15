@@ -38,6 +38,8 @@ All the required datasets are provided inside the datasets folder. There are 17 
 applicable) is:
 `--dataset` [17 options]:
 `mrpc, cola, sst2, rte, cb, sick, boolq, csqa, winogrande_l, scitail, imdb, cosmosqa, socialiqa, hellaswag, qnli, qqp, mnli`
+##### Hardware:
+We ran all the experiments on either 40GB or 80GB NVIDIA A100 GPUs except for Experiment 1. The difference in running between the two is just the batch sizes to avoid CUDA memory allocation error. We used 32 batchsize for most of the data for 40GB and 80GB. For specific datasets like imdb, boolq we used variable batch sizes like 4 or something else based on GPU availability.
 
 Before running any experiments that are described below, the following setup should be completed step by step:
 1. Allocate the GPU
@@ -47,6 +49,12 @@ Before running any experiments that are described below, the following setup sho
 
 ### Experiment 1 to support Contribution 1: 
 #### Inference Time Comparison between Conventional Reconstruction and Proposed Contraction Method
+##### Hardware: 
+We ran the artifact using NVIDIA A100 SXM4, NVIDIA H100 HBM3, NVIDIA A100 PCIe-40GB, Tesla P100, GTX 1080 Ti.
+
+##### Explantion:
+As per the results mentioned in the paper, you can see the speedup in NVIDIA A100 SXM4 and NVIDIA H100 HBM3. TT-LoRA's contraction advantage is realized when the kernels can fully exploit modern accelerator characteristics—specifically, higher HBM bandwidth, lower interconnect overhead (SXM vs. PCIe), and newer tensor-core execution paths with improved kernel scheduling. On A100 SXM4 and especially H100 HBM3, our re-runs reproduce the paper's behavior i.e. improvement in the inference time: we don't expect the exact replication of the values as they are very sensitive to multiple aspects, but there is improvement in inference speed using our contraction method compared to previous method of reconstruction.
+
 Inside the folder Artifact_1.1, the script in `inference_comparison.py` contains two TT-LoRA adaptation of loaded pre-trained model: conventional reconstruction and proposed contraction method.
 Running terminal inside the cloned folder from git, we can execute the code in the given format:
 `python Artifact_1.1/inference_comparison.py --batchsize 8 --dataset qnli --test reconstruction --gpus 4 --workers 8`  
